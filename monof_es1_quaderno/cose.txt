@@ -1,0 +1,45 @@
+Proviamo a verificare che i risultati trovati con lo strumento sis.
+-comando 1
+	write_blif mono_es1.blif
+
+-comando 2
+	write_eqn
+	print_stats
+
+effettuamo la minimizzazione utilizzando il comando 
+	simplify
+notiamo che la minimizzazione può ancora essere ridotta, i letterali possono ancora generare consensi
+	full_simplify
+	print_stats
+	print
+il costo di letterali s è ridotto.
+----
+lanciando i comandi seguenti si ottiene lo stesso risultato:
+sis> read_blif mono_es1.blif
+sis> write_pla mono_pla.pla
+sis> quit
+espresso -s mono_pla.pla
+e per ottenere le operazioni svolte da espresso:
+espresso -t -x mono_pla.pla
+----- mapping tecnologico
+
+Proviamo ad effettuare un mapping tecnologico della rete ottenuta, per fare questo utilizziamo come detto, 
+la libreria mcnc.genlib
+
+-comando 1 
+	#effettuata la lettura del blif e le mìnimizzazioni come sopra
+	possiamo effettuare un mapping riducendo area o ritardo oppure possiamo una combinazione lineare di entrambi
+
+	proviamo a fare un mapping che assuma come funzione di costo una combinazione lineare tra area e ritardo dando maggiore
+	peso al ritardo (usiamo il parametro 0.8)
+	impostiamo inoltre il tempo di arrivo degli ingressi (default imput arrival) il tempo richiesto per avere a disposizione 
+	l'output (default output required) ed il tempo necessario affinche gli ingressi arrivino al nodo(Default Input drive)
+
+	set_delay -A0 -R3 -D0
+
+
+	map -W -m 0.8 -s
+
+	print_delay
+
+in questo modo potremo avere informazioni sull'area totale del circutito, i tempi di slack e di massimo arrivo
