@@ -1,0 +1,13 @@
+v 4
+file . "half_adder.vhd" "f9ebc5858c725493ca1e6f99469b6209792dc4b7" "20171028172255.824":
+  entity half_adder at 1( 0) + 0 on 51;
+  architecture dataflow of half_adder at 13( 187) + 0 on 52;
+file . "ripple_carry_adder.vhd" "fdbca74a91f376a7693c429f5c1ca5f5ae4a5563" "20171028172258.823":
+  entity ripple_carry_adder at 1( 0) + 0 on 55;
+  architecture structural of ripple_carry_adder at 16( 341) + 0 on 56;
+file . "full_adder.vhd" "be97307af517dafbbe526e4b8a4bf60f49786254" "20171028172257.322":
+  entity full_adder at 1( 0) + 0 on 53;
+  architecture structural of full_adder at 14( 208) + 0 on 54;
+file . "ripple_carry_adder_tsb.vhd" "7a9025efe916185ecc2a15f50be6127461fe3321" "20171028172300.277":
+  entity ripple_carry_adder_tsb at 1( 0) + 0 on 57;
+  architecture behavioral of ripple_carry_adder_tsb at 8( 147) + 0 on 58;

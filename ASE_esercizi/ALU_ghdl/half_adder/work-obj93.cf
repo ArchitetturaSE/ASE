@@ -1,0 +1,7 @@
+v 4
+file . "half_adder_tsb.vhd" "20397006933a99868dad2e94564fe5cbe17a3221" "20171028135047.319":
+  entity half_adder_tsb at 1( 0) + 0 on 35;
+  architecture behavioral of half_adder_tsb at 7( 462) + 0 on 36;
+file . "half_adder.vhd" "f9ebc5858c725493ca1e6f99469b6209792dc4b7" "20171028135045.803":
+  entity half_adder at 1( 0) + 0 on 33;
+  architecture dataflow of half_adder at 13( 187) + 0 on 34;
