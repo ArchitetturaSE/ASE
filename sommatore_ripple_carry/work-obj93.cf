@@ -1,0 +1,13 @@
+v 3
+file . "sommatore_ripple_carry_testbench.vhd" "20171101145338.000" "20171101155341.473":
+  entity sommatore_ripple_carry_testbench at 1( 0) + 0 on 203;
+  architecture behavioural of sommatore_ripple_carry_testbench at 9( 218) + 0 on 204;
+file . "half_adder.vhd" "20171029220236.000" "20171101155341.373":
+  entity half_adder at 1( 0) + 0 on 197;
+  architecture dataflow of half_adder at 12( 218) + 0 on 198;
+file . "full_adder.vhd" "20171029224256.000" "20171101155341.404":
+  entity full_adder at 1( 0) + 0 on 199;
+  architecture structural of full_adder at 13( 258) + 0 on 200;
+file . "sommatore_ripple_carry.vhd" "20171030161336.000" "20171101155341.436":
+  entity sommatore_ripple_carry at 1( 0) + 0 on 201;
+  architecture structural of sommatore_ripple_carry at 14( 363) + 0 on 202;
